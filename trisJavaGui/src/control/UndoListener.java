@@ -39,17 +39,28 @@ public class UndoListener implements ActionListener {
                     for (int j = 0; j < btns[i].length; j++) {
                         btns[i][j].setIcon(null);
                         btns[i][j].setBackground(Color.DARK_GRAY);
+                        btns[i][j].setDisabledIcon(null);
+                        btns[i][j].setEnabled(true);
                     }
                 }
 
                 playfieldListener.setI(0);
                 winController.clean();
             } else if (((JButton) e.getSource()).getText().equalsIgnoreCase("reset")) {
+                for (int i = 0; i < btns.length; i++) {
+                    for (int j = 0; j < btns[i].length; j++) {
+                        btns[i][j].setIcon(null);
+                        btns[i][j].setBackground(Color.DARK_GRAY);
+                        btns[i][j].setDisabledIcon(null);
+                        btns[i][j].setEnabled(true);
+                    }
+                }
+
                 winController.clean();
                 winController.setScore1(0);
                 winController.setScore2(0);
-                this.sc1.setText(this.sc1.getText().substring(0, this.sc1.getText().length() - 1));
-                this.sc2.setText(this.sc2.getText().substring(0, this.sc2.getText().length() - 1));
+                this.sc1.setText(this.sc1.getText().substring(0, this.sc1.getText().length() - 1) + "0");
+                this.sc2.setText(this.sc2.getText().substring(0, this.sc2.getText().length() - 1) + "0");
             } else {
                 window.remove(window.getContentPane().getComponent(0));
                 window.add(home);

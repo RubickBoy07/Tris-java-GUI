@@ -38,8 +38,10 @@ public class PlayfieldListener implements ActionListener {
             if (((JButton) e.getSource()).getIcon() == null) {
                 if (i % 2 == 0) {
                     ((JButton) e.getSource()).setIcon(crossResized);
+                    ((JButton) e.getSource()).setDisabledIcon(crossResized);
                 } else {
                     ((JButton) e.getSource()).setIcon(circleResized);
+                    ((JButton) e.getSource()).setDisabledIcon(circleResized);
                 }
 
                 i++;

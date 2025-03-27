@@ -31,8 +31,8 @@ public class Game extends JPanel {
 
         JPanel sideBt = new JPanel();
         JLabel scoreTtl = new JLabel("Punteggio");
-        JLabel sc1 = new JLabel("Giocatore 1: ");
-        JLabel sc2 = new JLabel("Giocatore 2: ");
+        JLabel sc1 = new JLabel("Giocatore 1:   0");
+        JLabel sc2 = new JLabel("Giocatore 2:   0");
         JButton reset = new JButton("Reset");
         JButton back = new JButton("");
         ImageIcon backArrow = new ImageIcon("src/images/backArrow.png");

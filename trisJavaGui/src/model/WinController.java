@@ -34,7 +34,7 @@ public class WinController {
         this.score2 = 0;
         this.btns = btns;
         this.sc1 = sc1;
-        this.sc2 = sc2;        
+        this.sc2 = sc2;
 
         for (int i = 0; i < this.camp.length; i++) {
             for (int j = 0; j < this.camp.length; j++) {
@@ -170,14 +170,26 @@ public class WinController {
             winner = 0;
         }
 
-        if(winner == 1) {
-            score1++;
-
-            this.sc1.setText(sc1.getText().substring(0, sc1.getText().length() - 1) + " " + score1);            
-        } else  if(winner == -1) {
+        if (winner == 1) {
             score2++;
 
-            this.sc2.setText(sc2.getText().substring(0, sc1.getText().length() - 1) + " " + score2);
+            this.sc2.setText(sc2.getText().substring(0, sc2.getText().length() - 1) + score2);
+
+            for (int i = 0; i < this.btns.length; i++) {
+                for (int j = 0; j < this.btns.length; j++) {
+                    this.btns[i][j].setEnabled(false);
+                }
+            }
+        } else if (winner == -1) {
+            score1++;
+
+            this.sc1.setText(sc1.getText().substring(0, sc1.getText().length() - 1) + score1);
+
+            for (int i = 0; i < this.btns.length; i++) {
+                for (int j = 0; j < this.btns.length; j++) {
+                    this.btns[i][j].setEnabled(false);
+                }
+            }
         }
 
         return winner;
