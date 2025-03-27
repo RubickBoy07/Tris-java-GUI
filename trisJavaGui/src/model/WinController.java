@@ -173,7 +173,7 @@ public class WinController {
         if (winner == 1) {
             score2++;
 
-            this.sc2.setText(sc2.getText().substring(0, sc2.getText().length() - 1) + score2);
+            this.sc2.setText(sc2.getText().substring(0, sc2.getText().indexOf(":") + 1) + " " + score2);
 
             for (int i = 0; i < this.btns.length; i++) {
                 for (int j = 0; j < this.btns.length; j++) {
@@ -183,7 +183,7 @@ public class WinController {
         } else if (winner == -1) {
             score1++;
 
-            this.sc1.setText(sc1.getText().substring(0, sc1.getText().length() - 1) + score1);
+            this.sc1.setText(sc1.getText().substring(0, sc1.getText().indexOf(":") + 1) + " " + score1);
 
             for (int i = 0; i < this.btns.length; i++) {
                 for (int j = 0; j < this.btns.length; j++) {

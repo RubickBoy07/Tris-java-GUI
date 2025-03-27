@@ -59,8 +59,9 @@ public class UndoListener implements ActionListener {
                 winController.clean();
                 winController.setScore1(0);
                 winController.setScore2(0);
-                this.sc1.setText(this.sc1.getText().substring(0, this.sc1.getText().length() - 1) + "0");
-                this.sc2.setText(this.sc2.getText().substring(0, this.sc2.getText().length() - 1) + "0");
+                this.sc1.setText(this.sc1.getText().substring(0, this.sc1.getText().indexOf(":") + 1) + " 0");
+                this.sc2.setText(this.sc2.getText().substring(0, this.sc2.getText().indexOf(":") + 1) + " 0");
+                playfieldListener.setI(0);
             } else {
                 window.remove(window.getContentPane().getComponent(0));
                 window.add(home);
