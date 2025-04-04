@@ -1,5 +1,7 @@
 package view;
 
+import java.net.URL;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -10,7 +12,8 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
-        ImageIcon logo = new ImageIcon("src/images/logo.png");
+        URL logoRes = getClass().getResource("/images/logo.png");
+        ImageIcon logo = new ImageIcon(logoRes);
         setIconImage(logo.getImage());
 
         add(new Home(this));

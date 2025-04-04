@@ -9,6 +9,7 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -35,7 +36,8 @@ public class Game extends JPanel {
         JLabel sc2 = new JLabel("Giocatore 2: 0");
         JButton reset = new JButton("Reset");
         JButton back = new JButton("");
-        ImageIcon backArrow = new ImageIcon("src/images/backArrow.png");
+        URL backArrowRes = getClass().getResource("/images/backArrow.png");
+        ImageIcon backArrow = new ImageIcon(backArrowRes);
 
         title.setFont(new Font("Arial", Font.BOLD, 100));
         title.setForeground(Color.YELLOW);
